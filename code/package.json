@@ -1,0 +1,25 @@
+{
+  "name": "k_id-examen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.2.13",
+    "postcss-nested": "^5.0.5",
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "author": "Mees Postma",
+  "license": "ISC"
+}
