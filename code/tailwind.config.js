@@ -19,6 +19,12 @@ module.exports = {
           light: '#262626',
           desc: '#D8D8D8'
         }
+      },
+      height: {
+        image: '450px'
+      },
+      width: {
+        image: '720px'
       }
     },
   },
