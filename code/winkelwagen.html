@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-moviebox</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="bg-black-bg">
+    <div class="relative bg-gray-light">
+        <div class="flex justify-between items-center px-12 py-6 md:px-16 sm:px-28 md:justify-start md:space-x-10">
+            <div>
+                <a href="index.html" class="flex">
+                    <span class="sr-only">E-moviebox</span>
+                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
+                        alt="">
+                </a>
+            </div>
+            <div class="-mr-2 -my-2 md:hidden">
+                <button type="button" id="open-nav"
+                    class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inet focus:ring-red"
+                    aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
+                <nav class="flex space-x-10">
+                    <a href="abonnementen.html" class="text-base font-medium text-white hover:text-gray-200">
+                        Alle abonnementen
+                    </a>
+                    <a href="vorige.html" class="text-base font-medium text-white hover:text-gray-200">
+                        Vorige abonnementen
+                    </a>
+                </nav>
+                <div class="flex items-center md:ml-12">
+                    <a href="#" class="text-base font-medium text-white hover:text-gray-200">
+                        Winkelwagen
+                    </a>
+                    <a href="#"
+                        class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red hover:bg-red-dark hover:text-gray-200">
+                        Film claimen
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden" id="nav">
+            <div class="rounded-lg shadow-lg ring-1 ring-red ring-opacity-5 bg-gray-light divide-y-2 divide-black-bg">
+                <div class="pt-5 pb-6 px-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
+                                alt="Workflow">
+                        </div>
+                        <div class="-mr-2">
+                            <button type="button" id="close-nav"
+                                class="bg-black-bg rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white hover:bg-black-bg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red">
+                                <span class="sr-only">Close menu</span>
+                                <!-- Heroicon name: outline/x -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-6 px-5">
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="abonnementen.html" class="text-base font-medium text-white hover:text-gray-desc">
+                            Alle abonnementen
+                        </a>
+
+                        <a href="vorige.html" class="text-base font-medium text-white hover:text-gray-desc">
+                            Vorige abonnementen
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#"
+                            class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-red bg-white hover:bg-gray-50">
+                            Winkelwagen
+                        </a>
+                        <a href="#"
+                            class="mt-4 w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red hover:bg-red-dark">
+                            Film claimen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form class="space-y-8 w-5/6 mx-auto divide-y divide-gray-200">
+        <div class="space-y-8 divide-y divide-gray-200">
+            <div class="pt-8">
+                <div>
+                    <h3 class="text-xl leading-6 font-normal text-white">
+                        Persoonlijke informatie
+                    </h3>
+                    <p class="mt-1 text-md text-gray-300">
+                        Vul je persoonlijke gegevens in zodat we de box naar het juiste adres verzenden
+                    </p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first_name" class="block text-sm font-medium text-white">
+                            Voornaam
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="first_name" id="first_name" autocomplete="given-name"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="last_name" class="block text-sm font-medium text-white">
+                            Achternaam
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="last_name" id="last_name" autocomplete="family-name"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="email" class="block text-sm font-medium text-white">
+                            E-mailadres
+                        </label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" autocomplete="email"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="phone" class="block text-sm font-medium text-white">
+                            Telefoonnummer
+                        </label>
+                        <div class="mt-1">
+                            <input id="phone" name="phone" type="text" autocomplete="phone"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-6">
+                        <label for="street_address" class="block text-sm font-medium text-white">
+                            Adres
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="street_address" id="street_address" autocomplete="street-address"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="city" class="block text-sm font-medium text-white">
+                            Plaats
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="city" id="city"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="state" class="block text-sm font-medium text-white">
+                            Provincie
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="state" id="state"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="zip" class="block text-sm font-medium text-white">
+                            Postcode
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="zip" id="zip" autocomplete="postal-code"
+                                class="focus:ring-red bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-2">
+                        <label for="country" class="block text-sm font-medium text-white mb-2">Dag van bezorging</label>
+                        <select id="country" name="country" autocomplete="country"
+                            class="focus:ring-red text-white text-sm bg-gray-light border-none focus:border-red block w-full sm:text-sm rounded-md">
+                            <option>Maandag</option>
+                            <option>Dinsdag</option>
+                            <option>Woensdag</option>
+                            <option>Donderdag</option>
+                            <option>Vrijdag</option>
+                            <option>Zaterdag</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="flex flex-col w-5/6 mx-auto mt-12">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="shadow overflow-hidden border-b border-gray-border sm:rounded-lg">
+                    <table class="min-w-full divide-y divide-gray-border">
+                        <thead class="bg-gray-light">
+                            <tr>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                    Product
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                    Prijs
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                                    Verzending
+                                </th>
+                                <th scope="col" class="relative px-6 py-3">
+                                    <span class="sr-only">Verwijderen</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Odd row -->
+                            <tr class="bg-gray-light">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">
+                                    The Family movie box
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-desc">
+                                    &euro; 24,99
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-desc">
+                                    1 keer per week
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a href="#" class="text-red hover:text-red-dark">Verwijderen</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <a href="#">
+            <button type="button"
+                class="mt-8 inline-flex items-center px-4 py-2 border border-transparent text-base font-normal rounded-md shadow-sm text-white bg-red hover:bg-red-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-dark">
+                Afrekenen
+            </button>
+        </a>
+    </div>
+
+
+    <footer>
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="index.html" class="text-base text-gray-desc hover:text-gray-200">
+                        Home
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="abonnementen.html" class="text-base text-gray-desc hover:text-gray-200">
+                        Alle abonnementen
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="vorige.html" class="text-base text-gray-desc hover:text-gray-200">
+                        Vorige abonnementen
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-desc hover:text-gray-200">
+                        Winkelwagen
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-desc hover:text-gray-200">
+                        Film Claimen
+                    </a>
+                </div>
+            </nav>
+            <p class="mt-8 text-center text-base text-white">
+                &copy; 2020 E-moviebox. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script src="js/app.js"></script>
+
+</html>

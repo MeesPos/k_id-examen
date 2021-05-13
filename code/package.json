@@ -4,6 +4,7 @@
   "description": "",
   "main": "tailwind.config.js",
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.2",
     "autoprefixer": "^10.2.5",
     "laravel-mix": "^6.0.18",
     "postcss": "^8.2.13",

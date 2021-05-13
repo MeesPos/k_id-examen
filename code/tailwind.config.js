@@ -17,7 +17,8 @@ module.exports = {
         },
         gray: {
           light: '#262626',
-          desc: '#D8D8D8'
+          desc: '#D8D8D8',
+          border: '#141414'
         }
       },
       height: {
@@ -31,5 +32,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
