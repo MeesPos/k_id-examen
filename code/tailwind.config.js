@@ -13,12 +13,14 @@ module.exports = {
           dark: '#961515'
         },
         black: {
-          bg: '#1F1B24'
+          bg: '#1F1B24',
+          input: '#1B1818'
         },
         gray: {
           light: '#262626',
           desc: '#D8D8D8',
-          border: '#141414'
+          border: '#141414',
+          placeholder: '#B8B8B8'
         }
       },
       height: {
@@ -26,6 +28,9 @@ module.exports = {
       },
       width: {
         image: '720px'
+      },
+      gridTemplateColumns: {
+        auto_auto: 'auto auto'
       }
     },
   },

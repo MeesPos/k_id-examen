@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-moviebox</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="bg-black-bg">
+    <div class="relative bg-gray-light">
+        <div class="flex justify-between items-center px-12 py-6 md:px-16 sm:px-28 md:justify-start md:space-x-10">
+            <div>
+                <a href="index.html" class="flex">
+                    <span class="sr-only">E-moviebox</span>
+                    <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
+                        alt="">
+                </a>
+            </div>
+            <div class="-mr-2 -my-2 md:hidden">
+                <button type="button" id="open-nav"
+                    class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inet focus:ring-red"
+                    aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
+                <nav class="flex space-x-10">
+                    <a href="abonnementen.html" class="text-base font-medium text-white hover:text-gray-200">
+                        Alle abonnementen
+                    </a>
+                    <a href="vorige.html" class="text-base font-medium text-white hover:text-gray-200">
+                        Vorige abonnementen
+                    </a>
+                </nav>
+                <div class="flex items-center md:ml-12">
+                    <a href="#" class="text-base font-medium text-white hover:text-gray-200">
+                        Winkelwagen
+                    </a>
+                    <a href="#"
+                        class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red hover:bg-red-dark hover:text-gray-200">
+                        Film claimen
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden" id="nav">
+            <div class="rounded-lg shadow-lg ring-1 ring-red ring-opacity-5 bg-gray-light divide-y-2 divide-black-bg">
+                <div class="pt-5 pb-6 px-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-white.svg"
+                                alt="Workflow">
+                        </div>
+                        <div class="-mr-2">
+                            <button type="button" id="close-nav"
+                                class="bg-black-bg rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white hover:bg-black-bg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red">
+                                <span class="sr-only">Close menu</span>
+                                <!-- Heroicon name: outline/x -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-6 px-5">
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="abonnementen.html" class="text-base font-medium text-white hover:text-gray-desc">
+                            Alle abonnementen
+                        </a>
+
+                        <a href="vorige.html" class="text-base font-medium text-white hover:text-gray-desc">
+                            Vorige abonnementen
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#"
+                            class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-red bg-white hover:bg-gray-50">
+                            Winkelwagen
+                        </a>
+                        <a href="#"
+                            class="mt-4 w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red hover:bg-red-dark">
+                            Film claimen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="sm:flex bg-gray-light w-11/12 md:w-4/5 lg:w-2/5 mx-auto p-8 text-white rounded-md mt-16">
+            <div class="w-full">
+                <h4 class="text-md font-medium">Vul je filmcode in om je film te claimen</h4>
+                <p class="mt-1 text-gray-desc">
+                    Vul hier je filmcode in om je film coupon code te krijgen.
+                </p>
+                <div>
+                    <div class="mt-4 grid sm:grid-rows-1 grid-rows-2 sm:grid-cols-auto_auto gap-3">
+                        <div>
+                            <input type="text" name="email" id="email"
+                                class="shadow-sm focus:ring-gray-light py-2 placeholder-gray-placeholder focus:border-gray-light block w-full sm:text-sm border-none bg-black-input rounded-md"
+                                placeholder="Filmcode" aria-describedby="email-optional">
+                        </div>
+                        <div>
+                            <button type="button"
+                                class="sm:inline-flex items-center w-full sm:w-auto px-3 py-3 sm:py-2 border border-transparent text-center text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-red hover:bg-red-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red">
+                                Verzilveren
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="max-w-7xl mx-auto pt-16 px-4 sm:pt-24 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-white text-center">
+                    Hoe werkt het?
+                </h2>
+                <div class="mt-12">
+                    <dl
+                        class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
+                        <div>
+                            <dt class="text-lg leading-6 font-medium text-white">
+                                Waar kan ik de film zien?
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-desc">
+                                Wanneer je de film geclaimd hebt, ga je naar de Pathé Thuis website. Hier krijg je de
+                                film en kan je de film bekijken.
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt class="text-lg leading-6 font-medium text-white">
+                                Hoelang heb ik de tijd om hem te kijken?
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-desc">
+                                Als je hem geclaimd hebt op Pathé Thuis heb je 48 uur de tijd om hem te kijken. Na die
+                                48 uur is de film helaas verlopen.
+                            </dd>
+                        </div>
+
+                        <div>
+                            <dt class="text-lg leading-6 font-medium text-white">
+                                Ik heb een box gekregen, maar geen code
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-desc">
+                                Als je geen code hebt gekregen van ons, neem dan contact met ons op via:
+                                <a href="mailto:mail@e-moviebox.nl" class="text-red">mail@e-moviebox.nl</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="index.html" class="text-base text-gray-desc hover:text-gray-200">
+                        Home
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="abonnementen.html" class="text-base text-gray-desc hover:text-gray-200">
+                        Alle abonnementen
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="vorige.html" class="text-base text-gray-desc hover:text-gray-200">
+                        Vorige abonnementen
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-desc hover:text-gray-200">
+                        Winkelwagen
+                    </a>
+                </div>
+
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base text-gray-desc hover:text-gray-200">
+                        Film Claimen
+                    </a>
+                </div>
+            </nav>
+            <p class="mt-8 text-center text-base text-white">
+                &copy; 2020 E-moviebox. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script src="js/app.js"></script>
+
+</html>
