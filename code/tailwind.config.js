@@ -30,7 +30,8 @@ module.exports = {
         image: '720px'
       },
       gridTemplateColumns: {
-        auto_auto: 'auto auto'
+        auto_auto: 'auto auto',
+        auto_1: 'auto 1fr'
       }
     },
   },
